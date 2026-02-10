@@ -39,20 +39,28 @@
 
     .icons {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 14px;
     }
 
     .icon-btn {
-      height: 64px;
+      height: 78px;
       border-radius: 16px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      color: #fff;
+      color: #ffffff;
+      font-size: 26px;
+      gap: 6px;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
       cursor: pointer;
+    }
+
+    .icon-btn span {
+      font-size: 12px;
+      font-weight: 500;
     }
 
     .icon-btn:hover {
@@ -60,23 +68,31 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.25);
     }
 
-    .instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
-    .whatsapp { background: #25d366; }
-    .tiktok { background: #000000; }
-    .shopee { background: #ee4d2d; }
+    .instagram {
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    }
+
+    .whatsapp {
+      background: #25d366;
+      color: #0b3d1f;
+      font-weight: 600;
+    }
+
+    .tiktok {
+      background: #000000;
+    }
+
+    .shopee {
+      background: #ee4d2d;
+      font-weight: 600;
+    }
 
     .pix {
       background: linear-gradient(135deg, #16a085, #1abc9c);
-      grid-column: span 3;
-      height: 58px;
+      grid-column: span 2;
+      height: 64px;
+      font-size: 22px;
       font-weight: 600;
-      font-size: 15px;
-    }
-
-    svg {
-      width: 26px;
-      height: 26px;
-      fill: #fff;
     }
 
     footer {
@@ -93,32 +109,29 @@
     <p>Impressão 3D • Projetos personalizados</p>
 
     <div class="icons">
-      <!-- Instagram -->
       <a class="icon-btn instagram" href="https://www.instagram.com/newlayers.3d" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5.5A4.5 4.5 0 1 1 7.5 12 4.51 4.51 0 0 1 12 7.5zm5.25-.75a1.05 1.05 0 1 1-1.05-1.05 1.05 1.05 0 0 1 1.05 1.05z"/></svg>
+        📸
+        <span>Instagram</span>
       </a>
 
-      <!-- WhatsApp -->
       <a class="icon-btn whatsapp" href="https://wa.me/5584981613811" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M12.04 2A9.94 9.94 0 0 0 2 12a9.86 9.86 0 0 0 1.45 5.1L2 22l5.05-1.33A9.94 9.94 0 1 0 12.04 2z"/></svg>
+        💬
+        <span>WhatsApp</span>
       </a>
 
-      <!-- TikTok -->
       <a class="icon-btn tiktok" href="https://www.tiktok.com/@newlayers3d" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M16 2c.4 2.1 1.6 3.7 3.6 4.5v3.2c-1.4.1-2.8-.3-3.9-1v6.7a6.2 6.2 0 1 1-6.2-6.2c.4 0 .8 0 1.2.1v3.3a2.9 2.9 0 1 0 2.1 2.8V2h3.2z"/></svg>
+        🎵
+        <span>TikTok</span>
       </a>
 
-      <!-- Shopee -->
-      <a class="icon-btn shopee" href="https://br.shp.ee/arEEcaJ" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M6 7V6a6 6 0 1 1 12 0v1h2v14H4V7h2zm2 0h8V6a4 4 0 0 0-8 0v1z"/></svg>
+      <a class="icon-btn shopee" href="https://br.shp.ee/u5q6ZzH" target="_blank">
+        🛒
+        <span>Shopee</span>
       </a>
 
-      <!-- Pix -->
       <div class="icon-btn pix" onclick="copyPix()">
-        <svg viewBox="0 0 24 24">
-          <path d="M10.4 2.4L2.4 10.4a2.3 2.3 0 0 0 0 3.2l8 8a2.3 2.3 0 0 0 3.2 0l8-8a2.3 2.3 0 0 0 0-3.2l-8-8a2.3 2.3 0 0 0-3.2 0z"/>
-        </svg>
-        &nbsp; Copiar Pix
+        💠
+        <span>Copiar Pix</span>
       </div>
     </div>
 

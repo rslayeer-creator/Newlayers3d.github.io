@@ -10,80 +10,73 @@
       margin: 0;
       min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: linear-gradient(135deg, #0a1f44, #4b2c82, #8e44ad);
+      background: linear-gradient(135deg, #0a1f44, #4b2c82, #9b59b6);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #111;
     }
 
     .card {
       background: #ffffff;
-      border-radius: 20px;
-      padding: 34px 24px;
+      border-radius: 22px;
+      padding: 34px 26px;
       width: 100%;
       max-width: 360px;
       text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+      box-shadow: 0 25px 45px rgba(0,0,0,0.35);
     }
 
     h1 {
       margin: 0;
       font-size: 26px;
-      letter-spacing: 0.5px;
     }
 
     p {
-      margin: 10px 0 28px;
+      margin: 10px 0 26px;
       font-size: 14px;
       color: #555;
     }
 
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 14px;
-      border-radius: 12px;
-      font-size: 15px;
-      font-weight: 500;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+    .icon-btn {
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      cursor: pointer;
     }
+
+    .icon-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    .instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
+    .whatsapp { background: #25d366; }
+    .tiktok { background: #000000; }
+    .shopee { background: #ee4d2d; }
 
     .pix {
       background: linear-gradient(135deg, #16a085, #1abc9c);
-      color: #ffffff;
+      grid-column: span 3;
+      height: 58px;
       font-weight: 600;
+      font-size: 15px;
     }
 
-    .whatsapp {
-      background: #25d366;
-      color: #0b3d1f;
-      font-weight: 600;
-    }
-
-    .instagram {
-      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
-      color: #fff;
-    }
-
-    .tiktok {
-      background: #000000;
-      color: #ffffff;
-    }
-
-    .shopee {
-      background: #ee4d2d;
-      color: #ffffff;
-      font-weight: 600;
+    svg {
+      width: 26px;
+      height: 26px;
+      fill: #fff;
     }
 
     footer {
@@ -99,29 +92,37 @@
     <h1>Newlayers 3D</h1>
     <p>Impressão 3D • Projetos personalizados</p>
 
-    <button class="btn pix" onclick="copyPix()">
-      Copiar Pix
-    </button>
+    <div class="icons">
+      <!-- Instagram -->
+      <a class="icon-btn instagram" href="https://www.instagram.com/newlayers.3d" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5.5A4.5 4.5 0 1 1 7.5 12 4.51 4.51 0 0 1 12 7.5zm5.25-.75a1.05 1.05 0 1 1-1.05-1.05 1.05 1.05 0 0 1 1.05 1.05z"/></svg>
+      </a>
 
-    <a class="btn whatsapp" href="https://wa.me/5584981613811" target="_blank">
-      WhatsApp
-    </a>
+      <!-- WhatsApp -->
+      <a class="icon-btn whatsapp" href="https://wa.me/5584981613811" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2A9.94 9.94 0 0 0 2 12a9.86 9.86 0 0 0 1.45 5.1L2 22l5.05-1.33A9.94 9.94 0 1 0 12.04 2z"/></svg>
+      </a>
 
-    <a class="btn instagram" href="https://www.instagram.com/newlayers.3d" target="_blank">
-      Instagram
-    </a>
+      <!-- TikTok -->
+      <a class="icon-btn tiktok" href="https://www.tiktok.com/@newlayers3d" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M16 2c.4 2.1 1.6 3.7 3.6 4.5v3.2c-1.4.1-2.8-.3-3.9-1v6.7a6.2 6.2 0 1 1-6.2-6.2c.4 0 .8 0 1.2.1v3.3a2.9 2.9 0 1 0 2.1 2.8V2h3.2z"/></svg>
+      </a>
 
-    <a class="btn tiktok" href="https://www.tiktok.com/@newlayers3d" target="_blank">
-      TikTok
-    </a>
+      <!-- Shopee -->
+      <a class="icon-btn shopee" href="https://br.shp.ee/arEEcaJ" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M6 7V6a6 6 0 1 1 12 0v1h2v14H4V7h2zm2 0h8V6a4 4 0 0 0-8 0v1z"/></svg>
+      </a>
 
-    <a class="btn shopee" href="https://br.shp.ee/oiwGzZJ" target="_blank">
-      Loja Shopee
-    </a>
+      <!-- Pix -->
+      <div class="icon-btn pix" onclick="copyPix()">
+        <svg viewBox="0 0 24 24">
+          <path d="M10.4 2.4L2.4 10.4a2.3 2.3 0 0 0 0 3.2l8 8a2.3 2.3 0 0 0 3.2 0l8-8a2.3 2.3 0 0 0 0-3.2l-8-8a2.3 2.3 0 0 0-3.2 0z"/>
+        </svg>
+        &nbsp; Copiar Pix
+      </div>
+    </div>
 
-    <footer>
-      © Newlayers 3D
-    </footer>
+    <footer>© Newlayers 3D</footer>
   </div>
 
   <script>
@@ -129,9 +130,7 @@
 
     function copyPix() {
       navigator.clipboard.writeText(pixCode).then(() => {
-        const btn = document.querySelector('.pix');
-        btn.innerText = 'Pix copiado ✅';
-        setTimeout(() => btn.innerText = 'Copiar Pix', 2500);
+        alert("Pix copiado com sucesso ✅");
       });
     }
   </script>

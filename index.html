@@ -5,6 +5,9 @@
   <title>Newlayers 3D</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -52,10 +55,13 @@
       justify-content: center;
       text-decoration: none;
       color: #ffffff;
-      font-size: 26px;
       gap: 6px;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
       cursor: pointer;
+    }
+
+    .icon-btn i {
+      font-size: 26px;
     }
 
     .icon-btn span {
@@ -74,8 +80,6 @@
 
     .whatsapp {
       background: #25d366;
-      color: #0b3d1f;
-      font-weight: 600;
     }
 
     .tiktok {
@@ -84,15 +88,12 @@
 
     .shopee {
       background: #ee4d2d;
-      font-weight: 600;
     }
 
     .pix {
       background: linear-gradient(135deg, #16a085, #1abc9c);
       grid-column: span 2;
       height: 64px;
-      font-size: 22px;
-      font-weight: 600;
     }
 
     footer {
@@ -110,27 +111,27 @@
 
     <div class="icons">
       <a class="icon-btn instagram" href="https://www.instagram.com/newlayers.3d" target="_blank">
-        📸
+        <i class="fa-brands fa-instagram"></i>
         <span>Instagram</span>
       </a>
 
       <a class="icon-btn whatsapp" href="https://wa.me/5584981613811" target="_blank">
-        💬
+        <i class="fa-brands fa-whatsapp"></i>
         <span>WhatsApp</span>
       </a>
 
       <a class="icon-btn tiktok" href="https://www.tiktok.com/@newlayers3d" target="_blank">
-        🎵
+        <i class="fa-brands fa-tiktok"></i>
         <span>TikTok</span>
       </a>
 
-      <a class="icon-btn shopee" href="https://br.shp.ee/u5q6ZzH" target="_blank">
-        🛒
+      <a class="icon-btn shopee" href="https://br.shp.ee/gBQViD3" target="_blank">
+        <i class="fa-solid fa-cart-shopping"></i>
         <span>Shopee</span>
       </a>
 
       <div class="icon-btn pix" onclick="copyPix()">
-        💠
+        <i class="fa-solid fa-qrcode"></i>
         <span>Copiar Pix</span>
       </div>
     </div>
